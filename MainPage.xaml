@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLEFinder.MainPage">
+
+    <VerticalStackLayout Padding="20">
+        <Button Text="Iniciar Scan" Clicked="OnScanClicked"/>
+        
+        <Label Text="Dispositivos Encontrados:" FontSize="Medium" Margin="0,10,0,0"/>
+        
+        <ScrollView Grid.Row="0">
+            <CollectionView x:Name="DevicesList"
+                    Margin="10"
+                    BackgroundColor="#FFFFFF">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Label Text="{Binding Name}" 
+                            FontSize="14" 
+                            TextColor="#757575" 
+                            HorizontalOptions="StartAndExpand"
+                            Margin="0,0,0,5" />
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+        <!-- 
+            <ListView ItemsSource="{Binding Devices}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Distance}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        -->
+        
+        <Label x:Name="StatusLabel" Text="Aguardando scan..." FontSize="Small" TextColor="Gray"/>
+    </VerticalStackLayout>
+
+</ContentPage>
