@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLEFinder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+22777f919c103ff6af0a91c8816a062314bc53dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLEFinder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLEFinder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

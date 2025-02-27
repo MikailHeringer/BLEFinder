@@ -30,7 +30,7 @@
     <AppXManifest Include="E:\OneDrive\Asus\Projetos\C#\BLEFinder\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-02-21T00:36:39.204</Modified>
+      <Modified>2025-02-27T00:03:11.338</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\OneDrive\Asus\Projetos\C#\BLEFinder\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BLEFinder.dll">
       <PackagePath>BLEFinder.dll</PackagePath>
-      <Modified>2025-02-21T00:36:37.650</Modified>
+      <Modified>2025-02-27T00:03:10.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\OneDrive\Asus\Projetos\C#\BLEFinder\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BLEFinder.exe</PackagePath>
-      <Modified>2025-02-21T00:36:37.874</Modified>
+      <Modified>2025-02-27T00:03:11.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\OneDrive\Asus\Projetos\C#\BLEFinder\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

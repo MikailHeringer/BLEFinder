@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\blescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:blescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|e:\\onedrive\\asus\\projetos\\c#\\blefinder\\blescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{874E25DD-47D5-4319-A54B-3FCF00F4BE11}|BLEFinder.csproj|solutionrelative:blescanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,42 +42,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T22:03:27.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwDoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAwwJEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T22:02:49.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BLEScanner.cs",
               "DocumentMoniker": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\BLEScanner.cs",
               "RelativeDocumentMoniker": "BLEScanner.cs",
               "ToolTip": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\BLEScanner.cs",
               "RelativeToolTip": "BLEScanner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T22:02:10.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T22:02:10.269Z"
             },
             {
               "$type": "Document",
@@ -91,7 +73,7 @@
               "RelativeDocumentMoniker": "MainPage.xaml",
               "ToolTip": "E:\\OneDrive\\Asus\\Projetos\\C#\\BLEFinder\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-20T15:18:10.407Z",
               "EditorCaption": ""
