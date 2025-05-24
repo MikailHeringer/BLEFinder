@@ -1,1 +1,0 @@
-E:\OneDrive\Asus\Projetos\C#\BLEFinder\BLEFinder.csproj;x64
