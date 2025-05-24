@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLEFinder.Paginas.Opcoes"
+             Title="">
+    
+    
+    <VerticalStackLayout Padding="20" >
+        <StackLayout x:Name="LoadingPage">
+            <ActivityIndicator x:Name="Loading"
+                           Color="#17AE8F"
+                           IsRunning="true"
+                           IsVisible="true"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center" 
+                           Margin="0,50,0,0" />
+        </StackLayout>
+        <StackLayout x:Name="ConfigPage" IsVisible="False">
+            <Picker x:Name="CursoPicker"
+                Title="Escolha o curso:"
+                ItemsSource="{Binding Cursos}"
+                FontSize="18"
+                BackgroundColor="Transparent"
+                TextColor="White" TitleColor="White"
+                SelectedIndexChanged="Picker_SelectedIndexChanged"/>
+
+            <Picker x:Name="SmPicker"
+                Margin="0,20,0,0"
+                Title="Escolha o semestre:"
+                ItemsSource="{Binding ListSem}"
+                FontSize="18"
+                BackgroundColor="Transparent"
+                TextColor="White" TitleColor="White"/>
+
+            <Button x:Name="SaveButton"
+                    Text="Salvar" 
+                    Margin="0,30,0,0" 
+                    BackgroundColor="#17AE8F" 
+                    TextColor="White" 
+                    FontAttributes="Bold"
+                    Clicked="Save_Clicked"/>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="End">
+                <Button x:Name="attLista"
+                    Text="Atualizar Lista"
+                    Margin="0,30,0,0" 
+                    BackgroundColor="#00FFFFFF" 
+                    TextColor="#17AE8F" 
+                    FontAttributes="Bold"
+                    Clicked="AtualizarLista_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
+    
+    
+    
+<!-- Curso, Semestre, e sala do predio P
+    
+    Foto, Audiovisual, Fonografia
+    2AUDION Sala: P/Audio
+    2FONON Sala: P/Audio
+    2FOTON Sala: P/Audio
+    3AUDION Sala: P/Vídeo, P/Audio
+    3FOTON Sala: P/Foto
+    4AUDION Sala: P/Vídeo, P/Audio
+
+    Publicidade e Propaganda
+    7PPN Sala: P/Vídeo
+    3PPN Sala: P/Foto
+    3PP Sala: P/Foto
+
+    Jornalismo
+    3JRN Sala: P/Foto
+
+    Design
+    3DGN Sala: P/Foto
+    
+-->

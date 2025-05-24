@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLEFinder.Paginas.Andar2"
+             BackgroundColor="#E6E6E6">
+
+    <Grid x:Name="MainGrid">
+        <Grid x:Name="loadingRoutes" 
+          BackgroundColor="#E6E6E6"
+          Opacity="0.9"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill"
+          IsVisible="false"
+          ZIndex="1">
+            <VerticalStackLayout
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+                <Label Text="Gerando nova rota"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+                <ActivityIndicator x:Name="Loading"
+                   Color="#17AE8F"
+                   IsRunning="false"
+                   IsVisible="false"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="Center" 
+                   Margin="0,10,0,0" />
+            </VerticalStackLayout>
+            
+            
+        </Grid>
+
+        <Border
+            x:Name="border"
+            Stroke="Transparent" 
+            StrokeThickness="2" 
+            StrokeShape="RoundRectangle 10"
+            Padding="2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            >
+            <Image 
+            x:Name="mapImage"
+            Margin="0,10,0,10"
+            Source="predio_p1_2.png" 
+            Aspect="AspectFit" 
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill" 
+            BackgroundColor="#E6E6E6">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Border>
+
+        <GraphicsView 
+            x:Name="drawingCanvas"
+            Drawable="{Binding Drawable}"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            InputTransparent="True" />
+        
+        <GraphicsView 
+            x:Name="graphicsView"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            Margin="0,10,0,10"
+            InputTransparent="True"/>
+
+        <AbsoluteLayout 
+            ZIndex="10"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            InputTransparent="False">
+
+            <VerticalStackLayout
+                AbsoluteLayout.LayoutBounds="0.05,0.98,-1,-1"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                Spacing="5">
+                <HorizontalStackLayout Spacing="5">
+                    <BoxView 
+                        WidthRequest="12"
+                        HeightRequest="12"
+                        BackgroundColor="#E6E6E6"
+                        Color="Blue"
+                        CornerRadius="10"
+                        VerticalOptions="Center" />
+                    <Label 
+                        Text="ORIGEM"
+                        TextColor="Black"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="5">
+                    <BoxView 
+                        WidthRequest="12"
+                        HeightRequest="12"
+                        BackgroundColor="#E6E6E6"
+                        Color="Red"
+                        CornerRadius="10"
+                        VerticalOptions="Center" />
+                    <Label 
+                        Text="DESTINO"
+                        TextColor="Black"
+                        FontSize="15"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </AbsoluteLayout>
+
+    </Grid>
+</ContentView>

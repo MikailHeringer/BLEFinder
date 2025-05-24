@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLEFinder.MainPage"
+             BackgroundColor="#3E3E3E">
+
+    <Grid x:Name="MainGrid">
+        <Image 
+            Source="fundo.png" 
+            Aspect="Fill" 
+            HorizontalOptions="Fill" 
+            VerticalOptions="Fill"/>
+
+        <Grid x:Name="TelaInicial" WidthRequest="400" HeightRequest="700" IsVisible="True">
+
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                <Image Source="anhembi.png" WidthRequest="200" HeightRequest="200" Margin="0, 0, 0, 100"/>
+                <Button Text="ENTRAR"
+                        BackgroundColor="#16A085"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="200"
+                        CornerRadius="10"
+                        Clicked="Button_Clicked"
+                       />
+
+                <!-- Clicked="Entrar_Clicked" -->
+            </VerticalStackLayout>
+
+        </Grid>
+    </Grid>
+</ContentPage>

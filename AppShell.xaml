@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BLEFinder.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BLEFinder"
+    xmlns:paginas="clr-namespace:BLEFinder.Paginas"
+    Shell.FlyoutBehavior="Disabled"
+    Title="BLEFinder">
+
+    <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    <ShellContent Route="Andar1" ContentTemplate="{DataTemplate paginas:Andar1}" />
+
+    <TabBar
+        Shell.TabBarUnselectedColor="#808080"
+        Shell.TabBarBackgroundColor="#3E3E3E"
+        Shell.TabBarForegroundColor="#17AE8F"
+        Shell.TabBarTitleColor="#17AE8F">
+        <Tab Title="Aulas" Icon="room.svg">
+            <ShellContent Route="Favorito" ContentTemplate="{DataTemplate paginas:Favorito}" />
+        </Tab>
+
+        <Tab Title="Mapa" Icon="map.svg">
+            <ShellContent Route="Mapa" ContentTemplate="{DataTemplate paginas:Mapa}" />
+        </Tab>
+
+        <Tab Title="Opções" Icon="opt.svg">
+            <ShellContent Route="Opcoes" ContentTemplate="{DataTemplate paginas:Opcoes}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

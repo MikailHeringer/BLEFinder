@@ -1,0 +1,197 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BLEFinder.Classes"
+             x:Class="BLEFinder.Paginas.Mapa"
+             Title="">
+
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!-- Tela principal -->
+        <Grid 
+              RowDefinitions="Auto,*"
+              AbsoluteLayout.LayoutBounds="0,0,1,1"
+              AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout 
+                x:Name="buttons"
+                HorizontalOptions="Center" 
+                Spacing="0"
+                Grid.Row="0">
+
+                <!-- Botão de scan -->
+                <Button Text="Ler QRCode"
+                        BackgroundColor="#16A085"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        WidthRequest="150"
+                        CornerRadius="10"
+                        Margin="0,5,5,0"
+                        Clicked="scanButton_Clicked" />
+
+                <!-- Botão de andares (Image buttons) -->
+                <Frame BorderColor="Transparent"  BackgroundColor="Transparent" Margin="0,5,0,0">
+                    <VerticalStackLayout 
+                        Spacing="0" 
+                        WidthRequest="310">
+                        <Label Text="Mapas do predio P" 
+                           HorizontalOptions="Center" 
+                           FontAttributes="Bold"
+                           Margin="0,-5,0,0"/>
+
+                        <ImageButton Source="predio_p1_0.png" 
+                                 Clicked="terreoButton_Clicked"
+                                 Margin="0,-90,0,0"
+                                 BackgroundColor="White"
+                                 WidthRequest="100"
+                                 HeightRequest="310"
+                                 Rotation="-90"/>
+
+                        <ImageButton Source="predio_p1_1.png"
+                                 Clicked="secondButton_Clicked"
+                                 Margin="0,-190,0,0"
+                                 BackgroundColor="White"
+                                 WidthRequest="100"
+                                 HeightRequest="310"
+                                 Rotation="-90"/>
+
+                        <ImageButton Source="predio_p1_2.png"
+                                 Clicked="thirdButton_Clicked"
+                                 Margin="0,-190,0,-100"
+                                 BackgroundColor="White"
+                                 WidthRequest="100"
+                                 HeightRequest="310"
+                                 Rotation="-90"/>
+
+                        <BoxView HeightRequest="2"
+                             Margin="0,10,0,0"
+                             Color="#16A085"
+                             HorizontalOptions="FillAndExpand" />
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <ContentView x:Name="contentView"
+                         Grid.Row="2"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"/>
+
+        </Grid>
+
+        <!-- Botão para voltar a tela inicial -->
+        <ImageButton
+            x:Name="returnButton"
+            Source="voltar.png"
+            IsVisible="False"
+            BackgroundColor="Transparent"
+            WidthRequest="40"
+            HeightRequest="40"
+            CornerRadius="10"
+            Margin="10"
+            AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="returnButton_Clicked"/>
+
+        <!-- Tela de inicio de navegação -->
+        <Frame x:Name="BackNavScreen"
+           IsVisible="false"
+           BackgroundColor="#3E3E3E"
+           Opacity="0.97"
+           CornerRadius="0"
+           BorderColor="Transparent"
+           AbsoluteLayout.LayoutBounds="0,0,1,1"
+           AbsoluteLayout.LayoutFlags="All" />
+
+        <ImageButton
+            x:Name="closeButton"
+            Source="close.png"
+            IsVisible="false"
+            BackgroundColor="Transparent"
+            WidthRequest="40"
+            HeightRequest="40"
+            CornerRadius="10"
+            Margin="10"
+            AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="closeButton_Clicked"/>
+
+        <Frame x:Name="BlackBackgroundBox"
+            IsVisible="false"
+            BackgroundColor="Transparent"
+            BorderColor="Black"
+            CornerRadius="10"
+            Padding="10"
+            WidthRequest="300"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+            AbsoluteLayout.LayoutFlags="PositionProportional">
+
+            <StackLayout Spacing="10">
+                <Label Text="Para iniciar, escaneie um QR Code ou aproxime-se de uma escada."
+                            x:Name="lbOrientacao"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center" />
+
+                <Button Text="Ler QRCode"
+                            x:Name="StartAlertButton"
+                            BackgroundColor="#16A085"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            WidthRequest="150"
+                            CornerRadius="10"
+                            Clicked="scanButton_Clicked"
+                            />
+
+                <Label Text="Beacon não localizado"
+                            x:Name="beaconAlert"
+                            FontAttributes="Bold"
+                            TextColor="Red"
+                            HorizontalTextAlignment="Center" />
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Posição atual:"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                                Margin="0,0,3,0"/>
+                    <Label Text="Desconhecida"
+                                x:Name="lbPosicao"
+                                FontAttributes="Bold"
+                                TextColor="Red"
+                                HorizontalTextAlignment="Center" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Destino:"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                                Margin="0,0,3,0"/>
+                    <Label Text=" "
+                                x:Name="lbDestino"
+                                FontAttributes="Bold"
+                                TextColor="#16A085"
+                                HorizontalTextAlignment="Center" />
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Frame>
+
+        <ContentView x:Name="contentScan"
+                         Grid.Row="2"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"/>
+
+        <!-- Botão para voltar a tela inicial -->
+        <ImageButton
+            x:Name="returnScanButton"
+            Source="voltar.png"
+            IsVisible="False"
+            BackgroundColor="Transparent"
+            WidthRequest="40"
+            HeightRequest="40"
+            CornerRadius="10"
+            Margin="10"
+            AbsoluteLayout.LayoutBounds="0,0,AutoSize,AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="returnScanButton_Clicked"/>
+    </AbsoluteLayout>
+</ContentPage>

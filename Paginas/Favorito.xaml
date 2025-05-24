@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLEFinder.Paginas.Favorito"
+             Title="">
+    <ScrollView>
+        <Grid>
+            <StackLayout x:Name="ErroMsg" Margin="0,0,0,0" IsVisible="False">
+                <Label Text="Erro ao carregas lista de salas" HorizontalOptions="Center"/>
+                <Label Text="contate o centro de apoio" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout x:Name="ConfigMSG" Margin="0,0,0,0" IsVisible="False">
+                <Label Text="Selecione seu curso e semestre" HorizontalOptions="Center"/>
+                <Label Text="na aba de opções" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout x:Name="UndefinedMSG" Margin="0,0,0,0" IsVisible="true" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Essa grade ainda não foi digitada!" FontSize="Large" TextColor="#17AE8F"/>
+            </StackLayout>
+
+            <ActivityIndicator x:Name="Loading"
+                           Color="#17AE8F"
+                           IsRunning="true"
+                           IsVisible="true"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center" 
+                           Margin="0,50,0,0" />
+            <!-- Lista de Aulas -->
+            <CollectionView ItemsSource="{Binding ListarAulas}" VerticalOptions="FillAndExpand" Margin="0,2,0,2" x:Name="List">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10"
+                               BackgroundColor="#2B2B2B"
+                               HasShadow="True"
+                               Margin="2,2,2,2"
+                               CornerRadius="9"
+                               HorizontalOptions="Fill">
+                            <Grid>
+
+
+                                <!-- Informações -->
+                                <StackLayout>
+                                    <Label Text="{Binding Curso}"
+                                           FontSize="16" Margin="0,0,0,0"
+                                           TextColor="#17AE8F"/>
+                                    <Label Text="{Binding Professor}"
+                                           FontSize="16"
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Local, StringFormat='Sala: {0}'}"
+                                           FontSize="16"
+                                           TextColor="White"/>
+                                    <Label Text="{Binding Horario}"
+                                           FontSize="16"
+                                           TextColor="White"/>
+                                </StackLayout>
+
+                                <StackLayout x:Name="DiaHoje" HorizontalOptions="End" VerticalOptions="Start" Grid.Column="1">
+                                    <Label Text="{Binding Dot}" TextColor="#17AE8F" FontSize="30" Margin="0,-12,0,0"/>
+                                </StackLayout>
+
+                                <StackLayout HorizontalOptions="End" VerticalOptions="End" Grid.Column="1">
+                                    <Image Source="mapicon.png" 
+                                           IsVisible="{Binding isVisible}" 
+                                           MaximumWidthRequest="40" 
+                                           HorizontalOptions="End" 
+                                           Margin="0,0,0,5"/>
+                                    <Label Text="{Binding Dia}" TextColor="White" HorizontalTextAlignment="End"/>
+                                </StackLayout>
+
+                                
+                                <Grid BackgroundColor="Transparent"
+                                      
+                                      IsVisible="{Binding isVisible}"
+                                      IsEnabled="{Binding isVisible}"
+                                      HorizontalOptions="FillAndExpand"
+                                      VerticalOptions="FillAndExpand"
+                                      InputTransparent="False">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="room_Tapped"
+                                                CommandParameter="{Binding Local}" />
+                                        </Grid.GestureRecognizers>
+                                </Grid>
+
+
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ScrollView>
+</ContentPage>
